@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:wallet_app/widgets/my_card.dart';
 
+import '../widgets/widgets.dart';
+
 class HomePage extends StatelessWidget {
   final _controller = PageController();
 
@@ -18,7 +20,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         'My',
                         style: TextStyle(
@@ -88,7 +90,33 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 25),
 
           // 3 buttons -> send + pay + bills
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                // send button
+                MyButton(
+                  iconImagePath: 'lib/icons/send-money.png',
+                  buttonText: 'Enviar',
+                ),
 
+                // pay button
+                MyButton(
+                  iconImagePath: 'lib/icons/credit-card.png',
+                  buttonText: 'Pagar',
+                ),
+
+                // bills button
+                MyButton(
+                  iconImagePath: 'lib/icons/bill.png',
+                  buttonText: 'Conta',
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 25),
           // column -> stats + transactions
         ]),
       ),
