@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         child: Column(children: [
           // appBar
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -37,15 +37,15 @@ class HomePage extends StatelessWidget {
 
                   // plus button
                   Container(
-                      padding: EdgeInsets.all(4),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
                         color: Colors.grey,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.add)),
+                      child: const Icon(Icons.add)),
                 ]),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
 
           // cards
           Container(
@@ -118,6 +118,15 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 25),
           // column -> stats + transactions
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Column(
+              children: const [
+                // statistics
+                MyListTile()
+              ],
+            ),
+          )
         ]),
       ),
     );
