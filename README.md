@@ -9,4 +9,4 @@
 
 ### Demonstração visual da tela do app
 
-[//]: # (![App UI]&#40;/ui.png&#41;)
+![Tela principal](/1.png)

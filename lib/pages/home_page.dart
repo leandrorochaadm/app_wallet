@@ -79,6 +79,7 @@ class HomePage extends StatelessWidget {
                       child: const Icon(Icons.add)),
                 ]),
           ),
+
           const SizedBox(height: 25),
 
           // cards
@@ -121,7 +122,7 @@ class HomePage extends StatelessWidget {
             effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
           ),
 
-          const SizedBox(height: 40),
+          const SizedBox(height: 20),
 
           // 3 buttons -> send + pay + bills
           Padding(
