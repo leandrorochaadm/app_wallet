@@ -29,25 +29,37 @@ class MyCard extends StatelessWidget {
           color: color,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const SizedBox(height: 10),
-          const Text('Saldo', style: TextStyle(color: Colors.white)),
-          const SizedBox(height: 10),
-          Text(
-            moneyFormat.format(balance),
-            style: const TextStyle(color: Colors.white, fontSize: 28),
-          ),
-          const SizedBox(height: 30),
-          Row(
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(cardNumber.toString(),
-                  style: const TextStyle(color: Colors.white)),
-              Text('$expiryMonth/$expiryYear',
-                  style: const TextStyle(color: Colors.white)),
-            ],
-          )
-        ]),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Saldo', style: TextStyle(color: Colors.white)),
+                  Image.asset('lib/icons/visa.png', height: 50, width: 50),
+                ],
+              ),
+              Text(
+                moneyFormat.format(balance),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 30),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(cardNumber.toString(),
+                      style: const TextStyle(color: Colors.white)),
+                  Text('$expiryMonth/$expiryYear',
+                      style: const TextStyle(color: Colors.white)),
+                ],
+              )
+            ]),
       ),
     );
   }
