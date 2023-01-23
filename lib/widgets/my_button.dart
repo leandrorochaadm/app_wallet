@@ -19,20 +19,21 @@ class MyButton extends StatelessWidget {
           height: 90,
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-              color: Colors.white,
+              // color: Colors.white,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                    color: Colors.grey.shade400,
-                    blurRadius: 40,
-                    spreadRadius: 10)
+                  color: Colors.white,
+                  blurRadius: 30,
+                  spreadRadius: 10,
+                )
               ]),
           child: Center(
             child: Image.asset(iconImagePath),
           ),
         ),
 
-        const SizedBox(height: 12),
+        const SizedBox(height: 4),
 
         // text
         Text(

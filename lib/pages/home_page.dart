@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
             effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade800),
           ),
 
-          const SizedBox(height: 25),
+          const SizedBox(height: 40),
 
           // 3 buttons -> send + pay + bills
           Padding(
@@ -116,14 +116,23 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 25),
+          const SizedBox(height: 40),
           // column -> stats + transactions
           Padding(
-            padding: const EdgeInsets.all(25.0),
+            padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Column(
               children: const [
                 // statistics
-                MyListTile()
+                MyListTile(
+                  iconImagePath: 'lib/icons/statistics.png',
+                  tileName: 'Estastiticas',
+                  tileSubTitle: 'Pagamentos e Recebimentos',
+                ),
+                MyListTile(
+                  iconImagePath: 'lib/icons/transaction.png',
+                  tileName: 'Transações',
+                  tileSubTitle: 'Histórico de transações',
+                ),
               ],
             ),
           )
