@@ -9,4 +9,4 @@
 
 ### Demonstração visual da tela do app
 
-![Tela principal](/1.png)
+![Tela principal](/prints/1.png)
